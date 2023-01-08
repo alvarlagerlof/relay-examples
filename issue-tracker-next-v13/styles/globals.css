@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: blue;
   text-decoration: none;
 }
 
@@ -22,5 +22,8 @@ a {
   body {
     color: white;
     background: black;
+  }
+  a {
+    color: dodgerblue !important;
   }
 }
