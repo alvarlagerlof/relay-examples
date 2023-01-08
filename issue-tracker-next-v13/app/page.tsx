@@ -18,9 +18,9 @@ const Page = async () => {
   // const Lang = createServerContext("lang", "en");
 
   return (
-    <Lang.Provider value={"test"}>
-      <MainViewClientComponent preloadedQuery={preloadedQuery} />
-    </Lang.Provider>
+    // <Lang.Provider value={"test"}>
+    <MainViewClientComponent preloadedQuery={preloadedQuery} />
+    // </Lang.Provider>
   );
 };
 

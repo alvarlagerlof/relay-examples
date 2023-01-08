@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "mkdir -p __generated__ && concurrently \"relay-compiler --watch\" \"next dev\"",
-    "build": "relay-compiler --validate && next build",
+    "build": "yarn relay && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
