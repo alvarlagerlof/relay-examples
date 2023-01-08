@@ -4,6 +4,8 @@ import MainViewQueryNode, {
 } from "__generated__/MainViewQuery.graphql";
 import MainViewClientComponent from "./MainViewClientComponent";
 
+// import { createServerContext } from "react";
+
 const Page = async () => {
   const preloadedQuery = await loadSerializableQuery<
     typeof MainViewQueryNode,
@@ -13,7 +15,13 @@ const Page = async () => {
     name: "relay",
   });
 
-  return <MainViewClientComponent preloadedQuery={preloadedQuery} />;
+  // const Lang = createServerContext("lang", "en");
+
+  return (
+    <Lang.Provider value={"test"}>
+      <MainViewClientComponent preloadedQuery={preloadedQuery} />
+    </Lang.Provider>
+  );
 };
 
 export default Page;
